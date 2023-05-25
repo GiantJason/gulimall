@@ -6,7 +6,6 @@
         <artifactId>gulimall</artifactId>
         <groupId>com.giantjason.gulimall</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +15,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <spring-cloud.version>2021.0.7</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -24,7 +23,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.1</version>
+            <version>3.2.0</version>
         </dependency>
 
         <dependency>
@@ -65,7 +64,19 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
+
+<!--        &lt;!&ndash;        加入spring-cloud-loadbalancer依赖&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-loadbalancer</artifactId>-->
+<!--        </dependency>-->
 
         <!--        配置中心来做配置管理-->
         <dependency>
