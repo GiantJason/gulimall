@@ -2,16 +2,17 @@ package com.giantjason.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
+import lombok.Data;
 
 /**
  * 商品属性
  * 
- * @author 夏沫止水
- * @email HeJieLin@gulimall.com
- * @date 2020-05-22 19:00:18
+ * @author GiantJason
+ * @email 1720003053b@gmail.com
+ * @date 2023-05-27 21:17:55
  */
 @Data
 @TableName("pms_attr")
@@ -32,6 +33,10 @@ public class AttrEntity implements Serializable {
 	 */
 	private Integer searchType;
 	/**
+	 * 值类型[0-为单个值，1-可以选择多个值]
+	 */
+	private Integer valueType;
+	/**
 	 * 属性图标
 	 */
 	private String icon;
@@ -50,12 +55,11 @@ public class AttrEntity implements Serializable {
 	/**
 	 * 所属分类
 	 */
-	private Long catelogId;
+	private Long catalogId;
 	/**
 	 * 快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整
 	 */
 	private Integer showDesc;
 
-
-
+//	private Long attrGroupId;
 }

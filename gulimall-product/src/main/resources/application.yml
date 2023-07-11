@@ -10,10 +10,24 @@ spring:
         server-addr: 127.0.0.1:8848
   application:
     name: gulimall-product
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
 server:
   port: 10000
+#adjust the logging level of current project to see some sql statement
+logging:
+  level:
+    com.giantjason.gulimall: debug
+alibaba:
+  cloud:
+    access-key: LTAI5tGBEGwLrxLUiERYyrwC
+    secret-key: Nczkx97CgudbUzpaCfRlugSfKHTZfe
+    oss:
+      endpoint: oss-cn-beijing.aliyuncs.com

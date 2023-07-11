@@ -11,7 +11,7 @@
     <groupId>com.giantjason.gulimall</groupId>
     <artifactId>gulimall-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order</name>
+    <name>gulimall-order</name>
     <description>order</description>
     <properties>
         <java.version>1.8</java.version>
